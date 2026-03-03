@@ -1,0 +1,76 @@
+/* margen general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;           /* full viewport height */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #3f1b93fb; /* color de fondo*/
+    color: #fcf8f8; /* Colos del texto*/
+    text-align: center;/* alinear el texto al centro*/
+    padding: 40px 0 1px 0; /* Espacio arriba del header para separarlo de otros elementos */
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    background-color: #3f1b93fb; /* color de fondo*/
+    padding: 0 10px 40px 10px;/* Espacio dentro del contenedor para separar el contenido de los bordes*/
+    display: flex; /* Esto convierte el contenedor en un contenedor flexible */
+    flex: 1; /* crecer para llenar la pantalla restante debajo del header */
+    width: 100%; /* Esto hace que el contenedor ocupe toda la anchura disponible */
+    gap: 50px; /* Espacio entre los elementos flexibles */
+    align-items: flex-end; /* Esto alinea los elementos flexibles al final del contenedor */
+    justify-content: center; /* Esto centra los elementos flexibles horizontalmente dentro del contenedor */
+}
+.box {
+    background-color: #ffffff; /* color de fondo*/
+    color: #000000; /* Colos del texto*/
+    text-align: center;/* alinear el texto al centro*/
+    gap: 10px; /* Espacio entre los elementos flexibles */
+    padding: 0 70px 20px 70px; /* Espacio dentro de cada caja para separar el contenido de los bordes*/
+    border-radius: 10px; /* Bordes redondeados para cada caja*/
+}
+h4 {
+    color: #6525fcd9; /* Color del texto del h4 */
+    background-color: burlywood; /* Color de fondo del h4 */
+    padding: 5px 10px 5px 10px; /* Espacio dentro del h4 para separar el texto de los bordes*/
+    margin-top: 0%; /* Elimina el margen superior del h4 para que esté más cerca del borde superior de la caja */
+}
+h3 {
+    color: #dde10a; /* Color del texto del h3 */
+    margin: 10px 0; /* Espacio arriba y abajo del h3 para separar el texto de otros elementos */
+}
+h2 {
+    color: #6525fcd9; /* Color del texto del h2 */
+    margin: 10px 0; /* Espacio arriba y abajo del h2 para separar el texto de otros elementos */
+    font-size: 2.5em; /* Tamaño del texto del h2 */
+}
+h1 {
+    color: #fcf8f8; /* Color del texto del h1 */
+    font: 3em sans-serif;
+    margin: 10px 0; /* Espacio arriba y abajo del h1 para separar el texto de otros elementos */
+}
+a {
+    display: inline-block; /* Esto hace que el enlace se comporte como un bloque en línea, lo que permite aplicar estilos de bloque */
+    margin-top: 40px; /* Espacio arriba del enlace para separarlo de otros elementos */
+    padding: 10px 20px; /* Espacio dentro del enlace para separar el texto de los bordes*/
+    color: #6a0cf6d9; /* Color del texto del enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border-radius: 5px; /* Bordes redondeados para el enlace */
+    margin-top: 10px; /* Espacio arriba del enlace para separarlo de otros elementos */
+}   
+a:hover {
+    background-color: #6a0cf6d9; /* Color de fondo del enlace al pasar el mouse por encima */
+    color: #ffffff; /* Color del texto del enlace al pasar el mouse por encima */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del enlace al pasar el mouse por encima */
+    box-shadow: 3px 3px 5px 3px rgba(249, 249, 249, 0.771);/* crea sombra debajo del enlace*/
+}
