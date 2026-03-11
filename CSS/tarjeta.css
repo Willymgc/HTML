@@ -1,0 +1,103 @@
+/* margen general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;           /* full viewport height */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    background-color: #f5f5f5; /* color de fondo*/
+    padding: 40px 10px;/* Espacio dentro del contenedor para separar el contenido de los bordes*/
+    display: flex; /* Esto convierte el contenedor en un contenedor flexible */
+    flex: 1; /* crecer para llenar la pantalla restante debajo del header */
+    width: 100%; /* Esto hace que el contenedor ocupe toda la anchura disponible */
+    gap: 30px; /* Espacio entre los elementos flexibles */
+    align-items: flex-start; /* Esto alinea los elementos flexibles al inicio del contenedor */
+    justify-content: center; /* Esto centra los elementos flexibles horizontalmente dentro del contenedor */
+    flex-wrap: wrap;
+}
+.box {
+    background-color: #ffffff; /* color de fondo*/
+    color: #666666; /* Colores del texto*/
+    text-align: center;/* alinear el texto al centro*/
+    padding: 20px 30px 30px 30px; /* Espacio dentro de cada caja para separar el contenido de los bordes*/
+    border-radius: 8px; /* Bordes redondeados para cada caja*/
+    width: 280px; /* Ancho fijo de la tarjeta */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.box:hover h2 {
+    color: #033827; /* Un tono más oscuro o el que prefieras */
+    transition: color 0.3s ease;
+}
+
+/* Cuando el mouse entra en la .box, el enlace (banda inferior) cambia de color */
+.box:hover a {
+    background-color: #033827; /* Cambia al color de la banda inferior al pasar el mouse */
+    transform: scale(1.02);
+}
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+h3 {
+    color: #333333; /* Color del texto del h3 */
+    margin: 15px 0 10px 0; /* Espacio arriba y abajo del h3 para separar el texto de otros elementos */
+    font-size: 1.1em;
+    font-weight: 600;
+}
+p {
+    color: #999999;
+    font-size: 0.9em;
+    margin: 8px 0 15px 0;
+    line-height: 1.4;
+}
+.img {
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+/* Estrellas */
+.estrellas {
+    display: inline-block;
+    margin-top: 12px;
+    color: #ffc107;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+a {
+    display: block;
+    margin-top: 20px;
+    padding: 12px 20px; 
+    color: #ffffff; 
+    text-decoration: none; 
+    border-radius: 4px; 
+    background-color: #1cc898;
+    font-weight: 600;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}   
+h2 {
+    color: #1cc898;
+    margin: 15px 0 10px 0;
+    font-size: 2.2em;
+    position: relative;
+}
+.currency {
+    font-size: 0.5em;
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    margin-right: 2px;
+}
