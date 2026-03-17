@@ -1,0 +1,238 @@
+/* margen general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Color de fondo y tipo de letra formulario */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: rgb(0, 0, 0); /* Color de fondo del cuerpo de la página */
+}
+/* Colos del fondo, tamaño*/
+header {
+    background-color: #15fe00d9; /* color de fondo*/
+    color: #fcf8f8; /* Colos del texto*/
+    padding: 3px 0; /* Espacio arriba y abajo del texto*/
+    text-align: center;/* alinear el texto al centro*/
+    box-shadow: 0 2px 5px rgba(249, 249, 249, 0.771);/* crea sombra debajo del header*/
+    position: sticky;/* hace que al moverse el contenido, el header se mantenga fijo*/
+    top: 0; /* esto indica que el header se mantenga fijo en la parte superior*/
+    z-index: 100;   /* esto asegura que el header se mantenga por encima de otros elementos en la página*/
+}
+.icono {
+    width: 15px; /* ancho del icono de la casita */
+    height: auto; /* mantiene la proporción del icono */
+    vertical-align: middle; /* alinea el icono verticalmente con el texto */
+    margin-right: 5px; /* espacio entre el icono y el texto */
+}
+.navbar {
+    background-color: #000000;/* Colos del menu*/
+    padding: 5px 0; /* Espacio arriba y abajo del menu*/
+    text-align: right;  /* alinear el menu a la derecha*/ 
+}
+.nav-link {
+    color: rgb(255, 255, 255);/* Colos del texto del menu*/
+    text-decoration: none; /* Elimina el subrayado de los enlaces*/
+    margin: 0 5px; /* Espacio entre los enlaces del menu*/
+    font-weight: 600;/* Hace el texto del menu más grueso*/
+    font-size: 12px; /* Tamaño del texto del menu*/  
+    display: inline-block;/* Esto permite aplicar padding y transform a los enlaces del menu*/
+    padding: 8px 5px;  /* Espacio dentro de los enlaces del menu*/
+    border-radius: 4px;/* Bordes redondeados para los enlaces del menu*/
+    transition: 0.3s; /* Transición suave para los efectos hover*/
+}
+
+.nav-link:hover {
+    background-color: #15fe00d9;  /* Color de fondo al pasar el mouse por encima del enlace del menu*/
+    text-decoration: none;  /* Asegura que el texto no se subraye al pasar el mouse por encima del enlace del menu*/
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del enlace del menu al pasar el mouse por encima*/
+}
+.h1 {
+    font-size: 20px; /* Tamaño del texto del título principal*/
+    position: relative ; /* Esto permite posicionar el pseudo-elemento ::after en relación al título principal*/
+    text-align: left;  /* alinear el menu a la derecha*/ 
+    padding-left: 25%; /* Espacio a la izquierda del título principal*/
+    width: 10%; /* Ancho fijo para el elemento con clase "gris" */
+    position: fixed; /* Posiciona el elemento de forma fija en la pantalla */
+    top: 0; /* Centra verticalmente el elemento en la pantalla */
+}
+.titulo {
+        width: 10%; /* Ancho fijo para el elemento con clase "gris" */
+        position: fixed; /* Posiciona el elemento de forma fija en la pantalla */
+        top: 0; /* Centra verticalmente el elemento en la pantalla */
+}
+.container {
+    flex: 1 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
+    grid-template-rows: auto; /* filas automáticas */
+    border-radius: 20px; /* Bordes redondeados para el contenedor */
+    background-color: black; /* Color de fondo del contenedor */
+    margin-top: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 40px;
+    gap: 10px; /* espacio entre elementos del grid */
+}
+.img{
+    
+    display: block;/* Esto hace que la imagen se comporte como un bloque, lo que permite centrarla con margin auto */
+    width: 90%; /* ancho relativo dentro de la caja (ajusta al gusto) */
+    max-width: 160px; /* tamaño máximo para que no sean demasiado grandes */
+    height: auto; /* preserva la proporción */
+    margin: 10px auto;  /* centra la imagen dentro de la caja */
+    transition: transform 0.2s ease, border-color 0.2s ease; /* suaviza el efecto */
+    border-radius: 20px; /* bordes redondeados para las imágenes */
+}
+.img:hover {
+    border: 3px solid #15fe00d9; /* Color del borde al pasar el mouse por encima del enlace del menu*/
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del enlace del menu al pasar el mouse por encima*/
+    box-shadow: 3px 3px 5px 3px rgba(249, 249, 249, 0.771);/* crea sombra debajo del las cajas*/
+}
+footer{
+    margin-top: auto;
+    flex-shrink: 0;
+    background-color: #000000; /* color de fondo*/
+    border-top: 2px solid #15fe00d9;
+    box-decoration-break: 0 2px 5px rgba(249, 249, 249, 0.771); /* crea sombra debajo del footer*/
+    color: #fcf8f8; /* Colos del texto*/
+    padding: 10px 0; /* Espacio arriba y abajo del texto*/
+    text-align: center;/* alinear el texto al centro*/
+    font-size: 15px;
+    
+}
+.imgfooter{
+    border-radius: 40%;
+    width: 10px; /* ancho del icono de la casita */
+    height: auto; /* mantiene la proporción del icono */
+    vertical-align: middle; /* alinea el icono verticalmente con el texto */
+    margin-right: 10px; /* espacio entre el icono y el texto */
+}
+.imgfooter:hover {
+    transform: scale(2.05); /* Aumenta ligeramente el tamaño del enlace del menu al pasar el mouse por encima*/
+    
+}
+.navbarfooter {
+    padding: 10px 0; /* Espacio arriba y abajo del menu*/
+    text-align: center;  /* alinear el menu a la derecha*/ 
+}
+.contactanos{
+    color: #ffffff;
+    display: flex;
+    padding: 30px 0 0 100px;
+}
+.mapa{
+    padding: 10px 0 10px 100px;
+    
+}
+form {
+    padding: 20px; /* Espacio dentro del formulario para separar el contenido de los bordes*/
+    border-radius: 80px; /* Bordes redondeados para el formulario*/
+    box-shadow: 0 1px 10px #ffffff; /* Sombra para darle profundidad al formulario*/
+    width: 510px; /* Ancho máximo del formulario*/
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;/* Centra el contenido del formulario horizontalmente*/
+    gap: 12px;
+}
+.h2{
+    text-align: center;
+}
+
+table {
+    width: 100%;    /* El formulario se ajusta al ancho del contenedor*/
+    margin: 0 auto;
+}
+label {
+    margin-bottom: 5px;/* Espacio debajo de las etiquetas para separar las etiquetas de los campos del formulario*/
+    font-weight: 600;/* Hace el texto de las etiquetas más grueso para destacar las etiquetas del formulario*/
+    color: #ffffff;/* Colos del texto de las etiquetas del formulario*/
+    font-size: 15px;/* Tamaño del texto de las etiquetas del formulario*/
+}
+
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%; /* El ancho de los campos del formulario se ajusta al 95% del contenedor*/
+    max-width: 450px;
+    padding: 9px 10px 10px; /* Espacio dentro de los campos del formulario para separar el texto de los bordes*/
+    border: none;   /* Elimina el borde predeterminado */
+    border-bottom: 2px solid #04ff15; /* Borde de los campos del formulario*/
+    background: transparent;
+    font-size: 14px;/* Tamaño del texto de los campos del formulario*/
+    font-family: Arial, sans-serif;/* Tipo de letra para los campos del formulario*/
+    transition: 0.3s;/* Transición suave para los efectos focus en los campos del formulario*/
+    color: #ffffff;
+}
+
+/* Efectos al enfocar los campos del formulario para cuando se hace clic sobre ellos*/
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline: none; /* Elimina el contorno predeterminado al enfocar los campos del formulario*/
+}
+
+textarea {
+    resize: vertical;  /* Permite que el usuario cambie el tamaño del textarea solo verticalmente para evitar que se desborde horizontalmente*/
+    field-sizing: border-box; /* Asegura que el tamaño del textarea incluya el padding y el borde para evitar que el contenido se desborde */
+    min-height: 90px;/* Altura mínima del textarea para asegurar que haya suficiente espacio para escribir el mensaje*/
+}
+
+button {
+    background-color: #000000; /* Color de fondo de los botones del formulario*/
+    color: rgb(255, 255, 255); /* Color del texto de los botones del formulario*/
+    border: none;   /* Elimina el borde predeterminado */
+    padding: 10px 20px; /* Espacio dentro de los botones del formulario para separar el texto de los bordes*/
+    border-radius: 40px; /* Bordes redondeados para los botones del formulario*/
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar el mouse sobre los botones del formulario para indicar que son interactivos*/
+    font-weight: 600;/* Hace el texto de los botones del formulario más grueso para destacar los botones del formulario*/
+    font-size: 15px; /* Tamaño del texto de los botones del formulario*/
+    transition: 0.3s;   /* Transición suave para los efectos hover en los botones del formulario*/
+    max-width: 480px;
+    margin-top: 0;
+}
+
+button:hover {
+    border-color: 3px #00ff1a;  /* Color de fondo al pasar el mouse por encima de los botones del formulario*/
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);   /* Agrega una sombra alrededor de los botones del formulario al pasar el mouse por encima para dar un efecto de elevación*/
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .navbar {
+        text-align: center; /* Centrar navbar en móvil */
+        padding: 10px 0;
+    }
+    .nav-link {
+        display: block; /* Hacer enlaces verticales */
+        margin: 5px 0;
+        font-size: 14px;
+    }
+    .h1 {
+        position: static; /* Quitar posición fija en móvil */
+        width: auto;
+        padding-left: 0;
+        text-align: center;
+    }
+    header {
+        position: static; /* Quitar sticky en móvil para mejor usabilidad */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
