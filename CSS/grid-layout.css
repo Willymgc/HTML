@@ -191,7 +191,7 @@ button:hover {
 
 @media (max-width: 480px) {
     .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         margin-left: 5%;
         margin-right: 5%;
     }
@@ -253,3 +253,24 @@ button:hover {
     }
 }
 
+/* Ajustes para landscape en móviles */
+@media (orientation: landscape) and (max-width: 768px) {
+    .contactanos {
+        padding: 10px 5px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .mapa {
+        padding: 10px 5px;
+        flex: 1;
+    }
+    .mapa iframe {
+        height: 200px;
+        aspect-ratio: 16/9;
+    }
+    form {
+        flex: 1;
+        max-width: 300px;
+        padding: 10px;
+    }
+}
