@@ -236,3 +236,52 @@ button:hover {
         margin-right: 10%;
     }
 }
+
+/* Media queries para contactanos y mapa */
+@media (max-width: 768px) {
+    .contactanos {
+        display: flex;
+        flex-direction: column; /* Apilar verticalmente en móvil */
+        padding: 20px 10px; /* Padding reducido */
+        align-items: center;
+    }
+    .mapa {
+        padding: 20px 10px; /* Padding reducido */
+        width: 100%;
+    }
+    .mapa iframe {
+        width: 100%; /* Hacer iframe responsivo */
+        height: 250px; /* Altura fija para móvil */
+        max-width: 100%;
+    }
+    form {
+        width: 100%; /* Ancho completo en móvil */
+        max-width: 400px; /* Máximo para no ser demasiado ancho */
+        padding: 15px;
+        border-radius: 20px; /* Reducir border-radius */
+    }
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil para películas y series */
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .navbar {
+        text-align: center;
+        padding: 10px 0;
+    }
+    .nav-link {
+        display: block;
+        margin: 5px 0;
+        font-size: 14px;
+    }
+    .h1 {
+        position: static;
+        width: auto;
+        padding-left: 0;
+        text-align: center;
+    }
+    header {
+        position: static;
+    }
+}
+
